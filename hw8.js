@@ -31,7 +31,7 @@ router.get('/',function(req,res){
                 'club': club,
                 'pos': pos,
                 'max_assists': assist,
-                'player': player,
+                'player': player.toString('utf8'),
                 'avg_assists': avg
             }
             console.log(json)
