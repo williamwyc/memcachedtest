@@ -31,11 +31,11 @@ router.get('/',function(req,res){
                 'club': club,
                 'pos': pos,
                 'max_assists': assist,
-                'player': JSON.parse(player),
+                'player': player,
                 'avg_assists': avg
             }
             console.log(json)
-            res.json(json)
+            res.json(JSON.parse(json))
         }
     })
 })
