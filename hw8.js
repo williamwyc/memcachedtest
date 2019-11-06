@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/',function(req,res){
     db = req.app.locals.db
-    data = req.params
+    data = req.query
     club = data.club
     pos = data.pos
     db.query('SELECT Player, GS, A FROM assists WHERE Club ='+club+'and Pos ='+pos,function(err,result,fields){
