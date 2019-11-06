@@ -45,7 +45,7 @@ router.get('/',function(req,res){
                         'player': player.toString('utf8'),
                         'avg_assists': avg
                     }
-                    memcached(key,json,5000,function(err){
+                    memcached.set(key,json,1000,function(err){
                         if(err){
                             console.log(err)
                         }
