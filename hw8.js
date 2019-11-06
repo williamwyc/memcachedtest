@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var utf8 = require('utf8');
 
 router.get('/',function(req,res){
     db = req.app.locals.db
@@ -30,7 +31,7 @@ router.get('/',function(req,res){
                 'club': club,
                 'pos': pos,
                 'max_assists': assist,
-                'player': player,
+                'player': utf8.encode(player),
                 'avg_assists': avg
             }
             console.log(json)
