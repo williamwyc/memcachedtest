@@ -1,7 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser = require('body-parser');
-var path = require('path');
 
 router.get('/',function(req,res){
     db = req.app.locals.db
