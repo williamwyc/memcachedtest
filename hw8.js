@@ -35,7 +35,7 @@ router.get('/',function(req,res){
                 'avg_assists': avg
             }
             console.log(json)
-            res.json(JSON.parse(json))
+            res.json(json)
         }
     })
 })
